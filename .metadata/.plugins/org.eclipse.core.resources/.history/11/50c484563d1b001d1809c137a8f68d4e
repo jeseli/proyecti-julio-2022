@@ -1,0 +1,25 @@
+package numeroyletras;
+
+import java.util.Arrays;
+
+public class numeroyletras {
+
+    public static void main(String[] args) {
+        Integer[] array = {1, 3, 5,3};
+        getCombinations(array, 1, 6);
+    }
+
+    public static void getCombinations(Integer[] nums, int idx, int search){
+
+        int complement = Arrays.asList(nums).indexOf(search - nums[idx]);
+        if (complement > -1 && idx != complement) {
+            System.out.println(nums[idx] + " + " + nums[complement]);
+        }
+
+        if (++idx < nums.length) {
+            getCombinations(nums, idx, search);
+        }
+    }
+
+}
+ 

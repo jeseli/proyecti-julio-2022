@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+C:\Users\jesel\OneDrive\Imágenes\Escritorio\CURSO JESELI\PROYECTI\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2861140562.index
+1582234324.index
+1703661937.index
+387774721.index
+2930642423.index
+2397304765.index
+2945159883.index

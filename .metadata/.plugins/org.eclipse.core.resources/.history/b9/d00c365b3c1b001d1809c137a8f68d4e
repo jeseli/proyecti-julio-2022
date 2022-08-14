@@ -1,0 +1,33 @@
+package numeroyletras;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class numeroyletras {
+	 int numero = 4;
+     ArrayList<Integer> list = new ArrayList();
+     Integer[] array = {1, 3, 5};
+     combinaciones(array, 0, 0, 6, list);
+  
+     
+     String s = (Recorrer(array, 6, 0, 0)) ? "Si" : "No";
+         System.out.println(s);
+ }
+
+ private static void combinaciones(Integer[] array, int contador, int index, int objetivo, ArrayList<Integer> list) {
+     if (contador == objetivo) {
+         System.out.println(list);
+     } else {
+         for (int i = 0; i < array.length; i++) {
+             contador += array[i];
+             List<Integer> lista= Arrays.asList(array);
+             if (contador <= objetivo && list.size()<array.length) {
+                 list.add(array[i]);
+                 combinaciones(array, contador, index, objetivo, list);
+                 list.remove(list.indexOf(array[i]));
+             }
+             contador -= array[i];
+         }
+     }
+ }

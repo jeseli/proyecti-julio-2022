@@ -1,0 +1,11 @@
+package mx.com.proyecti.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController//Le indica a String que esta clase representa la capa controladora. 
+//				Expone las operaciones de mi servicio web de tipo REST
+				
+public class EmployeeController {
+	
+
+}

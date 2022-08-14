@@ -1,0 +1,16 @@
+package mx.com.proyecti.jaxws;
+
+import javax.jws.WebMethod;
+import javax.jws.WebService;
+
+@WebService
+public class TestWS {
+	public final String word = "Hola Jax - WS";
+	
+	public TestWS() {
+		
+	}
+	
+	
+
+}

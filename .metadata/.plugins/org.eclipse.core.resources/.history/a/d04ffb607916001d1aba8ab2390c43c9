@@ -1,0 +1,5 @@
+package mx.com.protecti.entity;
+
+public class Employee {
+
+}

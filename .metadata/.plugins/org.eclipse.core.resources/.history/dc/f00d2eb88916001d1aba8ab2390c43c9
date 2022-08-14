@@ -1,0 +1,37 @@
+package mx.com.proyecti.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import mx.com.protecti.entity.Employee;
+
+@Service //indica a Spring que esta lase representa la capa de servicios, expone a la clase para inicializar dependencias
+public class EmployeeServicelmpl implements EmployeeService {
+
+	public List<Employee> getAllEmployees() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Employee getEmployee(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Long insertEmployee(Employee employee) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Boolean updateEmployee(Employee employee) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Boolean deleteEmploye(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

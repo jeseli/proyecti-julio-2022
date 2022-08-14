@@ -1,0 +1,37 @@
+package mx.com.proyecti;
+
+import javax.jws.WebMethod;
+import javax.jws.WebParam;
+
+import mx.com.proyecti.entity.Employee;
+
+public class EmployeeSoap {
+	private EmployeeManager manager;
+		
+		public EmployeeSoap() {
+			manager = new EmployeeManager();
+		}
+		
+		//Operación
+		@WebMethod
+		public Employee readEmployee(@WebParam(name="id") Long id) {return manager.getEmployee(id);}
+		
+		@WebMethod
+		public Employee createEmployee(@WebParam(name = "firstName", name ="lastName") Long firstName, long lastName) {return manager.getEmployee(firstName, lastName);}
+		
+		@WebMethod
+		public Employee deleteEmployee(@WebParam(name = "id") Long id) {return manager.getEmployee(id);}
+		
+		@WebMethod
+		public Employee readAllEmployees(@WebParam(name = "listEmployees") Long listEmployees) {return manager.getEmployee(listEmployees);}
+		
+		
+		//TODO: 
+		//Generen los métos restantes:
+		//createEmployee(firstName, lastName...)
+		//updateEmployee(Long id, firstName, lastName)
+		//deleteEmployee(Long id)
+		//readAllEmployees()
+		//Anteponer a cada método la anotación @WebMethod
+		//Probar todas las operaciones en SOAPUI
+}

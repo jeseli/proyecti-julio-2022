@@ -1,0 +1,57 @@
+package busquedaNumeros;
+import java.util.Scanner;
+public class busquedaNumeros {
+	
+	
+	private Scanner teclado;
+    private int[] cursoa;
+    private int[] cursob;
+    
+    public void cargar() {
+        teclado=new Scanner(System.in);
+        cursoa=new int[2];
+        cursob=new int[2];
+        System.out.println("Carga de notas del curso A");
+        for(int f=0;f<2;f++) {
+            System.out.print("Ingrese nota:");
+            cursoa[f]=teclado.nextInt();
+        }
+        System.out.println("Carga del notas del curso B");
+        for(int f=0;f<2;f++) {
+            System.out.print("Ingrese nota:");
+            cursob[f]=teclado.nextInt();
+        }        
+    }    
+    
+    public void calcularPromedios() {
+        int suma1=0;
+        int suma2=0;
+        for(int f=0;f<2;f++) {
+            suma1=suma1+cursoa[f];
+            suma2=suma2+cursob[f];            
+        }
+        int promedioa=suma1/2;
+        int promediob=suma2/2;
+        if (promedioa>promediob) {
+            System.out.println("El curso A tiene un promedio mayor.");
+        } else {
+            System.out.println("El curso B tiene un promedio mayor.");
+        }
+    }
+    
+    public static void main(String[] ar) {
+    	busquedaNumeros pv=new busquedaNumeros();
+        pv.cargar();
+        pv.calcularPromedios();
+    }   } 
+
+
+//
+//class Solution {
+//	public String solution (String []A, String[]B, String []P) {
+//		String[] A = {"María", "Gerson"};   //Array de 2 elementos
+//		String[]B= {"1111111111","111111111"};
+//		String[]P= {"111"};
+//		return null;
+//	}
+//}

@@ -1,0 +1,36 @@
+package numeroyletras;
+
+import java.util.Arrays;
+
+public class numeroyletras {
+	 static void PossibleCombinations(int Input_Array[], int n, int Length, int Array_Index,
+				int Empty_Array[], int x) {
+if (Array_Index == Length) {
+for (int y=0; y<Length; y++)
+System.out.print(Empty_Array[y]+" ");
+System.out.println("");
+return;
+}
+
+if (x >= n)
+return;
+
+Empty_Array[Array_Index] = Input_Array[x];
+PossibleCombinations(Input_Array, n, Length, Array_Index+1, Empty_Array, x+1);
+
+PossibleCombinations(Input_Array, n, Length, Array_Index, Empty_Array, x+1);
+}
+
+static void Print_Combination(int Input_Array[], int n, int Length) {
+int Empty_Array[]=new int[Length];
+
+PossibleCombinations(Input_Array, n, Length, 0, Empty_Array, 0);
+}
+
+public static void main (String[] args) {
+int Input_Array[] = {10,30, 50, 70, 90, 100};
+int Length = 3;
+int n = Input_Array.length;
+Print_Combination(Input_Array, n, Length);
+}
+}
